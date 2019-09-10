@@ -1,0 +1,31 @@
+# This is a sample build configuration for .NET Core.
+# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment
+image: microsoft/dotnet:sdk
+
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - dotnetcore
+          script: # Modify the comma`nds below to build your repository.
+            - export PROJECT_NAME=EVisionAssignment.Domain
+            - export BUILD_NUMBER=`git log --oneline | wc -l`
+            - dotnet restore
+            - dotnet build $PROJECT_NAME
+            - dotnet pack --configuration ${BUILD_CONFIGURATION} --version-suffix=$BUILD_NUMBER
+            - dotnet nuget push ${BITBUCKET_CLONE_DIR}/${PROJECT_NAME}/bin/${BUILD_CONFIGURATION}/*.nupkg -s ${MYGET_NUGET_URL} -k ${MYGET_NUGET_APIKEY}
+  pull-requests:
+    '**': #this runs as default for any branch not elsewhere defined
+    - step:
+        caches:
+             - dotnetcore
+        script: # Modify the comma`nds below to build your repository.
+             - export PROJECT_NAME=EVisionAssignment.Domain
+             - export TEST_NAME=EVisionAssignment.Domain.Test
+             - dotnet restore
+             - dotnet build $PROJECT_NAME
+             - dotnet test $TEST_NAME

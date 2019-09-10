@@ -1,4 +1,4 @@
-#EVISION ASSIGNMENT SOLUTION
+#SIMPLE UNIT TEST SOLUTION
 This project contains solutions to the "Developer Candidate Assignment". It consists of 2 projects, one for solution to the problems and one for testing the implementations.
 
 ##Getting Started
@@ -20,7 +20,7 @@ Build with
     1. dotnet build (Bitbucket pipeline)
 	
 ##How is it done?
-2 projects has been added to the solution which are "EVisionAssignment.Domain" and "EVisionAssignment.Domain.Test". 
+2 projects has been added to the solution which are "SimpleUnitTest.Domain" and "SimpleUnitTest.Domain.Test". 
 EVisionAssignment.Domain project consists of "AccountInfo" and "IAccountService".
 EVisionAssignment.Domain.Test project consists of "AccountInfoTests" class. There are 5 base tests and with "InlineData", it expands to 13.
 
@@ -149,7 +149,7 @@ builds the code, runs the tests and publishes a nuget package to https://www.myg
     -on pull requests, it builds the application and runs the tests
     -when merged to master branch, it builds the project, creates a nuget package and pushes it to MyGet.
 
-Just to demonstrate it I have used MyGet. Full package path is "https://www.myget.org/feed/ktt/package/nuget/EVisionAssignment.Domain". I ll keep it public until you check it
+Just to demonstrate it I have used MyGet. Full package path is "https://www.myget.org/feed/ktt/package/nuget/SimpleUnitTestAssignment.Domain". I ll keep it public until you check it
 then I will delete it. Some statements for build process are;
 
 	- dotnet build $PROJECT_NAME=> for building the project

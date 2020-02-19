@@ -1,5 +1,5 @@
 #SIMPLE UNIT TEST SOLUTION
-This project contains solutions to the "Developer Candidate Assignment". It consists of 2 projects, one for solution to the problems and one for testing the implementations.
+It consists of 2 projects, one for solution to the problems and one for testing the implementations.
 
 ##Getting Started
 This solutions are implemented in order to test and solve the problems described in the assignment. All 3 problems has been resolved and required implementations has been accomplished.

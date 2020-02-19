@@ -1,8 +1,8 @@
-#SIMPLE UNIT TEST SOLUTION
+# SIMPLE UNIT TEST SOLUTION
 
 It consists of 2 projects, one for solution to the problems and one for testing the implementations.
 
-##Getting Started
+## Getting Started
 This solutions are implemented in order to test and solve the problems described in the assignment. All 3 problems has been resolved and required implementations has been accomplished.
 
 ##Tech/framework used
@@ -20,7 +20,7 @@ Build with
 	
     1. dotnet build (Bitbucket pipeline)
 	
-##How is it done?
+## How is it done?
 2 projects has been added to the solution which are "SimpleUnitTest.Domain" and "SimpleUnitTest.Domain.Test". 
 EVisionAssignment.Domain project consists of "AccountInfo" and "IAccountService".
 EVisionAssignment.Domain.Test project consists of "AccountInfoTests" class. There are 5 base tests and with "InlineData", it expands to 13.
@@ -159,6 +159,6 @@ then I will delete it. Some statements for build process are;
 	- dotnet nuget push => push the package to the repo with extension of "*.nupkg"
 
 
-##Credits
+## Credits
 	Credit to push to myget Maarten Balliauw https://blog.maartenballiauw.be/post/2016/08/17/building-nuget-netcore-using-atlassian-bitbucket-pipelines.html
 	Credit to inspiration repos mongodb c# driver https://github.com/mongodb/mongo-csharp-driver and Neo4J c# driver https://github.com/neo4j/neo4j-dotnet-driver

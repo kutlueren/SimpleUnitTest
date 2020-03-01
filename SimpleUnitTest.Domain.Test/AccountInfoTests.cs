@@ -1,4 +1,3 @@
-using SimpleUnitTest.Domain;
 using FluentAssertions;
 using Moq;
 using System;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 
 namespace SimpleUnitTest.Domain.Test
-{ 
+{
     public class AccountInfoTests
     {
         private Mock<IAccountService> _accountService;
@@ -77,9 +76,9 @@ namespace SimpleUnitTest.Domain.Test
             });
 
             AccountInfo accountInfo = new AccountInfo(accountId, _accountService.Object);
-            
+
             int concurrentCount = 10;
-            
+
             List<Task> tasks = new List<Task>();
 
             for (int i = 0; i < concurrentCount; i++)
